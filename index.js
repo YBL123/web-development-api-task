@@ -21,7 +21,7 @@ app.use(errorHandler)  //* errorHandler will receive anything that will come aft
 
 
 // const PORT = process.env.PORT || 8000 //* this is a fallback incase the process.env file doesn't work
-const PORT = process.env.DB_CONNECT || 8000
+const PORT = process.env.PORT || 8000
 
 const server = app.listen(PORT, () => console.log(`Express is listening on port ${PORT}`))
 
