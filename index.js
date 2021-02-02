@@ -17,12 +17,9 @@ app.use('/api', router)
 
 app.use(errorHandler)  //* errorHandler will receive anything that will come after the controller -> in this case there are 2 options -> 1) asyncHandler, catch/next 2) next within a controller
 
-const port = 8000
+const PORT = process.env.PORT || 8000
 
-const url = process.env.MONGODB_URI || 'mongodb://localhost/Cluster0';
-mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true})
-  .then(async () => {
-    await app.listen(port);
-    console.log(`user API running on port ${port}`)
-  })
-  .catch(error => console.log(error));
+const server = app.listen(
+  PORT,
+  console.log(`app is running on port ${PORT}`)
+)
