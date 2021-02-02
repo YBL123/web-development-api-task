@@ -59,7 +59,7 @@ app.use(errorHandler)  //* errorHandler will receive anything that will come aft
 
 const port = 8000
 
-const url = process.env.DB_CONNECT || 'mongodb://localhost/Cluster0';
+const url = process.env.MONGODB_URI || 'mongodb://localhost/Cluster0';
 mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true})
   .then(async () => {
     await app.listen(port);
