@@ -5,4 +5,4 @@
 ~ npm run start
 ```
 
-Please find doucmentation in the following url: 
+Please find doucmentation in the following url: https://documenter.getpostman.com/view/13330297/TW71k6DG
